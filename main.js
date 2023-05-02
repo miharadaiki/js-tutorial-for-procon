@@ -13,6 +13,10 @@ Components[0] = new CanvasComponents({
 });
 Components[0].update = function () {
   this.rotate += 10;
+this.position.x += 5  
+this.position.y += this.motion.y;
+this.position.y += 10
+this.motion.y += 1
 };
 
 function update() {
