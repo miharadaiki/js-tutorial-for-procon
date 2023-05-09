@@ -159,3 +159,18 @@ class CanvasManager {
     return this.size.y;
   }
 }
+
+class keyInputManager {
+  constructor() {
+    this.key = {};
+    window.addEventListener("keydown", (e) => {
+      this.key[e.key] = true;
+    });
+    window.addEventListener("keyup", (e) => {
+      this.key[e.key] = false;
+    });
+  }
+  IsPressed(key) {
+    return this.key[key];
+  }
+}
